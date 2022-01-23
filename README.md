@@ -2,8 +2,6 @@
 
 ## 📚 Algorithm Study (Python)
 
----
-
 ### week1
 
 - 백준 1535번 안녕
