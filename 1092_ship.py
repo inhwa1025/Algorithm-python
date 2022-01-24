@@ -2,24 +2,25 @@
 # 정렬, 그리디 알고리즘
 import sys
 
-n = int(sys.stdin.readline().strip())
+n = int(input())
 crane = list(map(int, sys.stdin.readline().split()))
-m = int(sys.stdin.readline().strip())
+m = int(input())
 box = list(map(int, sys.stdin.readline().split()))
 
-if max(crane) < max(box):
+crane.sort(reverse=True)
+box.sort(reverse=True)
+time = 0
+
+if crane[0] < box[0]:
     print(-1)
     exit(0)
 
-crane.sort(reverse=True)
-box.sort()
-time = 0
-
-while True:
+while box:
     time += 1
-    for i in range(n):
-        if not box:
-            print(time)
-            exit(0)
-        if crane[i] < box[-1]: break
-        box.pop()
+    for cur_crane in crane:
+        for j in range(len(box)):
+            if cur_crane >= box[j]:
+                del box[j]
+                break
+
+print(time)
