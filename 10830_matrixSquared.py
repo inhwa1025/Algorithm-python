@@ -15,18 +15,20 @@ def squared(matrix1, matrix2):
 
 
 def recursion(input_matrix, exponent):
-    global matrix
-    if exponent == 1:
+    global size
+    if exponent == 1:   # 왜 여기서 1000으로 나누기를 안해주면 틀렸다고 하는지 모르겠음..!
+        for i in range(size):
+            for j in range(size):
+                input_matrix[i][j] %= 1000
         return input_matrix
-    elif exponent%2 == 0:
-        return squared(recursion(input_matrix, exponent//2), recursion(input_matrix, exponent//2))
+
+    tmp_matrix = recursion(input_matrix, exponent//2)
+    if exponent % 2:
+        return squared(squared(tmp_matrix, tmp_matrix), input_matrix)
     else:
-        return squared(recursion(input_matrix, exponent-1), matrix)
+        return squared(tmp_matrix, tmp_matrix)
 
 
 result = recursion(matrix, b)
-
-for m in range(size):
-    for n in range(size):
-        print(result[m][n], end=" ")
-    print()
+for r in result:
+    print(*r)
