@@ -1,3 +1,5 @@
+# 백준 10815번 숫자 카드
+# 분할 정복을 이용한 거듭제곱, 수학, 선형대수학
 import sys
 
 size, b = map(int, sys.stdin.readline().split())
