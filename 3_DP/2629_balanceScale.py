@@ -12,11 +12,13 @@ subset = []
 for i in range(1, weight_n+1):
     tmp = list(combinations(weights, i))
     for t in tmp:
-        subset.append(sum(t))
+        if not sum(t) in subset:
+            subset.append(sum(t))
 
 tmp = list(combinations(subset, 2))
 for a, b in tmp:
-    subset.append(b - a)
+    if not (b - a) in subset:
+        subset.append(b - a)
 
 for j in range(ball_n):
     if balls[j] in subset:
