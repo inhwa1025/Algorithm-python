@@ -19,15 +19,15 @@ for _ in range(k):
 bag.sort()
 
 while jewel:
+    if not bag:
+        break
+
     tmp = heapq.heappop(jewel)
 
     for i in range(len(bag)):
-        if tmp[1] < bag[i]:
+        if tmp[1] <= bag[i]:
             del bag[i]
             result += -tmp[0]
             break
-
-    if not bag:
-        break
 
 print(result)
