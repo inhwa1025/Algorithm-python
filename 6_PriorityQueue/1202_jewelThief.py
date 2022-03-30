@@ -15,13 +15,9 @@ for _ in range(n):
 
 for _ in range(k):
     bag.append(int(sys.stdin.readline()))
-
 bag.sort()
 
-while jewel:
-    if not bag:
-        break
-
+while jewel and bag:
     tmp = heapq.heappop(jewel)
 
     for i in range(len(bag)):
