@@ -4,26 +4,25 @@ import sys
 import heapq
 
 jewel = []
-bag = []
+bags = []
 result = 0
 
 n, k = map(int, sys.stdin.readline().split())
 
 for _ in range(n):
-    weight, value = map(int, sys.stdin.readline().split())
-    heapq.heappush(jewel, (-value, weight))
+    heapq.heappush(jewel, list(map(int, sys.stdin.readline().split())))
 
 for _ in range(k):
-    bag.append(int(sys.stdin.readline()))
-bag.sort()
+    bags.append(int(sys.stdin.readline()))
+bags.sort()
 
-while jewel and bag:
-    tmp = heapq.heappop(jewel)
-
-    for i in range(len(bag)):
-        if tmp[1] <= bag[i]:
-            del bag[i]
-            result += -tmp[0]
-            break
+queue = []
+for bag in bags:
+    while jewel and jewel[0][0] <= bag:
+        heapq.heappush(queue, -heapq.heappop(jewel)[1])
+    if queue:
+        result -= heapq.heappop(queue)
+    elif not jewel:
+        break
 
 print(result)
