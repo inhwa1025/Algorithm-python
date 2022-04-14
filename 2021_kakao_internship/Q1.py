@@ -1,8 +1,3 @@
-import sys
-
-s = str(sys.stdin.readline().strip())
-
-
 # -------혼자 푼 방법-------
 def solution_1(s):
     result = ""
@@ -59,6 +54,3 @@ def solution(s):
     s = s.replace('nine', '9')
 
     return int(s)
-
-
-print(solution(s))
