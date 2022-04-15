@@ -7,26 +7,28 @@ dy = [0, 0, 1, -1]
 
 def bfs(place, x, y):
     queue = deque()
+    queue.append((x, y))
 
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
+    max_dist = 2
 
-        if (0 <= nx < 5) and (0 <= ny < 5) and not visited[nx][ny]:
-            visited[nx][ny] = True
-            if place[nx][ny] == "P":
-                return False
-            elif place[nx][ny] == "O":
-                queue.append((nx, ny))
+    while queue and max_dist:
+        queue_size = len(queue)
+        max_dist -= 1
 
-    while queue:
-        x, y = queue.popleft()
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
+        while queue_size:
+            x, y = queue.popleft()
+            queue_size -= 1
 
-            if (0 <= nx < 5) and (0 <= ny < 5) and not visited[nx][ny] and place[nx][ny] == "P":
-                return False
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+
+                if (0 <= nx < 5) and (0 <= ny < 5) and not visited[nx][ny]:
+                    visited[nx][ny] = True
+                    if place[nx][ny] == "P":
+                        return False
+                    elif place[nx][ny] == "O":
+                        queue.append((nx, ny))
 
     return True
 
@@ -36,9 +38,8 @@ def solv(place):
     visited = [[False for _ in range(5)] for _ in range(5)]
 
     for i in range(5):
-        line = place[i]
         for j in range(5):
-            if line[j] == "P":
+            if place[i][j] == "P":
                 visited[i][j] = True
                 if not bfs(place, i, j):
                     return 0
@@ -52,3 +53,11 @@ def solution(places):
         answer.append(solv(place))
 
     return answer
+
+
+waiting_room = [["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"],
+                ["POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"],
+                ["PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"],
+                ["OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"],
+                ["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]]
+print(solution(waiting_room))
