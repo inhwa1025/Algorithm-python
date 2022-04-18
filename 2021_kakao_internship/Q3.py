@@ -1,23 +1,23 @@
 def solution(n, k, cmd):
     answer = ''
-    table = ["O" for _ in range(n)]
     able = [i for i in range(n)]
     stack = []
 
     for now_cmd in cmd:
         if now_cmd == "C":
-            table[able[k]] = "X"
             stack.append((k, able[k]))
 
-            if k < len(able) - 1:
-                k += 1
-            else:
+            del able[k]
+
+            if k == len(able):
                 k -= 1
 
         elif now_cmd == "Z":
-            idx, col = stack.pop()
-            able.insert(idx, col)
-            table[col] = "O"
+            if stack:
+                idx, col = stack.pop()
+                able.insert(idx, col)
+                if idx <= k:
+                    k += 1
 
         elif now_cmd[0] == "U":
             x = int(now_cmd[2:])
@@ -27,7 +27,18 @@ def solution(n, k, cmd):
             x = int(now_cmd[2:])
             k += x
 
-    for result in table:
-        answer += result
+    for i in range(n):
+        if i in able:
+            answer += "O"
+        else:
+            answer += "X"
 
     return answer
+
+
+n = 8
+k = 2
+cmd = ["D 2","C","U 3","C","D 4","C","U 2","Z","Z"]
+cmd2 = ["D 2","C","U 3","C","D 4","C","U 2","Z","Z","U 1","C"]
+print(solution(n, k, cmd))
+print(solution(n, k, cmd2))
