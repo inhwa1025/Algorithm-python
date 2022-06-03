@@ -1,5 +1,8 @@
+from itertools import combinations
+
+
 # 채점 결과 정확성: 91.7/ 100.0
-def solution(number, k):
+def solution_2(number, k):
     arr = list(number)
 
     maxidx = arr.index(max(arr[:k]))
@@ -22,3 +25,9 @@ def solution(number, k):
             i += 1
 
     return ''.join(arr)
+
+
+# 시간초과
+def solution_1(number, k):
+    answer = list(combinations(list(number), len(number)-k))
+    return ''.join(max(answer, reverse=True))
