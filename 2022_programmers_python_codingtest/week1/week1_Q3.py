@@ -1,11 +1,9 @@
-# 채점 결과 정확성: 60.0/ 100.0
+# 채점 결과 정확성: 100.0/ 100.0
 def solution(numbers):
     strnum = [str(num) for num in numbers]
-
     strnum.sort(key=lambda x: x * 3, reverse=True)
-    answer = str(int(''.join(strnum)))
 
-    return answer
+    return str(int(''.join(strnum)))
 
 
 # 채점 결과 정확성: 60.0/ 100.0
