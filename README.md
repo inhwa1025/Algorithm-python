@@ -51,6 +51,7 @@
 - BOJ 1926번 그림
 - BOJ 2178번 미로
 - BOJ 7576번 토마토
+- BOJ 2667번 단지번호붙이기 
 
 
 ## 7. DFS, Backtracking
