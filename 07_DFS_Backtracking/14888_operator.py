@@ -1,7 +1,7 @@
 # 백준 14888번 연산자 끼워넣기
 # 브루트포스, 백트래킹
 import sys
-max_result = 0
+max_result = -1e9
 min_result = 1e9
 n = 0
 arr = []
