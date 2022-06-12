@@ -1,18 +1,42 @@
 # 📚 Algorithm Study (Python)
 
-## 1. 브루트포스, 그리디
+## 1. Bruteforce
 
 - BOJ 1535번 안녕
-- BOJ 2012번 등수 매기기
 - BOJ 18111번 마인크래프트
 - BOJ 1038번 감소하는 수
-- BOJ 1092번 배 
-- BOJ 1041번 주사위
 - BOJ 15661번 링크와 스타트
 - BOJ 14888번 연산자 끼워넣기
 
 
-## 2. 분할정복
+## 2. Greedy
+
+- BOJ 1041번 주사위
+- Programmers 체육복
+
+
+## 3. Sort
+
+- BOJ 10814번 나이순 정렬
+- BOJ 1092번 배 
+- BOJ 2012번 등수 매기기
+- Programmers 가장 큰 수 
+
+
+## 4. Hash (Dictionary)
+
+- Programmers 완주하지 못한 선수 
+- Programmers 큰 수 만들기 
+
+
+## 5. Heap (Priority Queue)
+
+- BOJ 1927번 최소 힙
+- BOJ 11279번 최대 힙
+- BOJ 1202번 보석 도둑
+- Programmers 더 맵게 
+
+## 6. Divide And Conquer
 
 - BOJ 10815번 숫자 카드
 - BOJ 1992번 쿼드트리
@@ -23,7 +47,7 @@
 - BOJ 13246번 행렬 제곱의 합 ❌
 
 
-## 3. 동적계획법
+## 7. Dynamic Programming
 
 - BOJ 1003번 피보나치 함수
 - BOJ 11727번 2×n 타일링 2
@@ -32,21 +56,15 @@
 - BOJ 1106번 호텔
 - BOJ 9084번 동전
 - BOJ 2629번 양팔저울 ❌
+- Programmers N으로 표현 
 
 
-## 4. Priority Queue
-
-- BOJ 1927번 최소 힙
-- BOJ 11279번 최대 힙
-- BOJ 1202번 보석 도둑
-
-
-## 5. Union & Find
+## 8. Union & Find
 
 - BOJ 1717번 집합의 표현 ❌
 
 
-## 6. BFS
+## 9. BFS
 
 - BOJ 1926번 그림
 - BOJ 2178번 미로
@@ -54,43 +72,25 @@
 - BOJ 2667번 단지번호붙이기 
 
 
-## 7. DFS, Backtracking
+## 10. DFS & Backtracking
 
 - BOJ 1987번 알파벳 ❌
 - BOJ 13023번 ABCDE ❌
 
 
-## 8. Dijkstra
+## 11. Dijkstra
 
 - BOJ 10282번 해킹
 - BOJ 18352번 특정 거리의 도시 찾기
 - BOJ 13424번 비밀 모임
 
 
-## 9. Segment Tree
+## 12. Segment Tree
 
 - BOJ 2357번 최솟값과 최대값 ❌
 
 
 ## 99. 기타 구현 연습 문제
-
-- BOJ 10814번 나이순 정렬
-
-
-# 2022 프로그래머스 커뮤러닝 5기 코테 실력 UP 패키지
-
-## 1주차 - 해시 / 그리디 / 정렬
-
-1. 완주하지 못한 선수 ➡️ 해시 
-2. 체육복 ➡️ 그리디 
-3. 가장 큰 수 ➡️ 정렬 
-4. 큰 수 만들기 ➡️ 그리디 
-
-## 3주차 - 해시, BFS, DFS, DP
-
-1. 더 맵게 ➡️ Heap
-2. N으로 표현 ➡️ DP
-3. 여행경로 ➡️ BFS/DFS
 
 
 # 코테 준비
