@@ -1,3 +1,5 @@
+# 프로그래머스 - 가장 큰 수
+# 정렬
 # 채점 결과 정확성: 100.0/ 100.0
 def solution(numbers):
     strnum = [str(num) for num in numbers]

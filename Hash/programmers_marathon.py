@@ -1,4 +1,4 @@
-# 1주차 연습문제 1번 - 완주하지 못한 선수
+# 프로그래머스 - 완주하지 못한 선수
 # 해시
 
 # 효율성: 24.31ms, 32.94ms, 32.94ms, 51.14ms, 62.41ms
@@ -13,15 +13,14 @@ def solution(participant, completion):
     return result[0]
 
 
-# 효율성: 25.11ms, 31.30ms, 43.16ms, 54.96ms, 52.79ms
+# 정렬을 사용해서 푼 방법
+# 효율성: 34.96ms, 34.96ms, 74.36ms, 78.98ms, 75.82ms
 def solution1(participant, completion):
-    dic = dict()
-    for p in participant:
-        dic[p] = dic.get(p, 0) + 1
-    for c in completion:
-        if dic[c] == 1:
-            dic.pop(c)
-            continue
-        dic[c] -= 1
+    participant.sort()
+    completion.sort()
 
-    return ''.join(dic.keys())
+    for i in range(len(participant) - 1):
+        if participant[i] != completion[i]:
+            return participant[i]
+
+    return participant[-1]
