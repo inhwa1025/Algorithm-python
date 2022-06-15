@@ -31,6 +31,7 @@
 - BOJ 11279번 최대 힙
 - BOJ 1202번 보석 도둑
 - Programmers 더 맵게 
+- Programmers 디스크 컨트롤러 
 
 ## 5. Divide And Conquer
 
