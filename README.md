@@ -2,91 +2,93 @@
 
 ## 1. Bruteforce
 
-- BOJ 1535번 안녕
-- BOJ 18111번 마인크래프트
-- BOJ 1038번 감소하는 수
-- BOJ 15661번 링크와 스타트
-- BOJ 14888번 연산자 끼워넣기
+- [BOJ] 1535번 안녕
+- [BOJ] 18111번 마인크래프트
+- [BOJ] 1038번 감소하는 수
+- [BOJ] 15661번 링크와 스타트
+- [BOJ] 14888번 연산자 끼워넣기
 
 
 ## 2. Greedy & Sort
 
-- BOJ 1041번 주사위
-- BOJ 10814번 나이순 정렬
-- BOJ 1092번 배 
-- BOJ 2012번 등수 매기기
-- Programmers 체육복
-- Programmers 가장 큰 수 
+- [BOJ] 1041번 주사위
+- [BOJ] 10814번 나이순 정렬
+- [BOJ] 1092번 배 
+- [BOJ] 2012번 등수 매기기
+- [Programmers] 체육복
+- [Programmers] 가장 큰 수 
+- [Codility] Lesson4. MissingInteger
 
 
 ## 3. Hash (Dictionary)
 
-- Programmers 완주하지 못한 선수 
-- Programmers 큰 수 만들기 
+- [Programmers] 완주하지 못한 선수 
+- [Programmers] 큰 수 만들기 
 
 
 ## 4. Heap (Priority Queue)
 
-- BOJ 1927번 최소 힙
-- BOJ 11279번 최대 힙
-- BOJ 1202번 보석 도둑
-- Programmers 더 맵게 
-- Programmers 디스크 컨트롤러 
+- [BOJ] 1927번 최소 힙
+- [BOJ] 11279번 최대 힙
+- [BOJ] 1202번 보석 도둑
+- [Programmers] 더 맵게 
+- [Programmers] 디스크 컨트롤러 
+
 
 ## 5. Divide And Conquer
 
-- BOJ 10815번 숫자 카드
-- BOJ 1992번 쿼드트리
-- BOJ 17829번 222-풀링
-- BOJ 2448번 별 찍기-11
-- BOJ 1629번 곱셈
-- BOJ 10830번 행렬 제곱
-- BOJ 13246번 행렬 제곱의 합 ❌
+- [BOJ] 10815번 숫자 카드
+- [BOJ] 1992번 쿼드트리
+- [BOJ] 17829번 222-풀링
+- [BOJ] 2448번 별 찍기-11
+- [BOJ] 1629번 곱셈
+- [BOJ] 10830번 행렬 제곱
+- [BOJ] 13246번 행렬 제곱의 합 ❌
 
 
 ## 6. Dynamic Programming
 
-- BOJ 1003번 피보나치 함수
-- BOJ 11727번 2×n 타일링 2
-- BOJ 1965번 상자넣기
-- BOJ 11660번 구간 합 구하기 5 ❌
-- BOJ 1106번 호텔
-- BOJ 9084번 동전
-- BOJ 2629번 양팔저울 ❌
-- Programmers N으로 표현 
+- [BOJ] 1003번 피보나치 함수
+- [BOJ] 11727번 2×n 타일링 2
+- [BOJ] 1965번 상자넣기
+- [BOJ] 11660번 구간 합 구하기 5 ❌
+- [BOJ] 1106번 호텔
+- [BOJ] 9084번 동전
+- [BOJ] 2629번 양팔저울 ❌
+- [Programmers] N으로 표현 
 
 
 ## 7. Union & Find
 
-- BOJ 1717번 집합의 표현 ❌
+- [BOJ] 1717번 집합의 표현 ❌
 
 
 ## 8. BFS
 
-- BOJ 1926번 그림
-- BOJ 2178번 미로
-- BOJ 7576번 토마토
-- BOJ 2667번 단지번호붙이기 
+- [BOJ] 1926번 그림
+- [BOJ] 2178번 미로
+- [BOJ] 7576번 토마토
+- [BOJ] 2667번 단지번호붙이기 
 
 
 ## 9. DFS & Backtracking
 
-- Programmers 여행경로 
-- Programmers 타겟 넘버 
-- BOJ 1987번 알파벳 ❌
-- BOJ 13023번 ABCDE ❌
+- [Programmers] 여행경로 
+- [Programmers] 타겟 넘버 
+- [BOJ] 1987번 알파벳 ❌
+- [BOJ] 13023번 ABCDE ❌
 
 
 ## 10. Dijkstra
 
-- BOJ 10282번 해킹
-- BOJ 18352번 특정 거리의 도시 찾기
-- BOJ 13424번 비밀 모임
+- [BOJ] 10282번 해킹
+- [BOJ] 18352번 특정 거리의 도시 찾기
+- [BOJ] 13424번 비밀 모임
 
 
 ## 11. Segment Tree
 
-- BOJ 2357번 최솟값과 최대값 ❌
+- [BOJ] 2357번 최솟값과 최대값 ❌
 
 
 ## 99. 기타 구현 연습 문제
