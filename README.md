@@ -7,7 +7,6 @@
 - [BOJ] 1038번 감소하는 수
 - [BOJ] 15661번 링크와 스타트
 - [BOJ] 14888번 연산자 끼워넣기
-- [Codility] Lesson1. BinaryGap
 
 
 ## 2. Greedy & Sort
