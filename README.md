@@ -75,6 +75,7 @@
 
 - [Programmers] 여행경로 
 - [Programmers] 타겟 넘버 
+- [BOJ] 9663번 N-Queen 
 - [BOJ] 1987번 알파벳 ❌
 - [BOJ] 13023번 ABCDE ❌
 
