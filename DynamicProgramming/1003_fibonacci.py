@@ -1,22 +1,21 @@
 # 백준 1003번 피보나치 함수
 # 동적계획법
+cache_zero = [1, 0]     # 0 출력 횟수
+cache_one = [0, 1]      # 1 출력 횟수
+
 testcase_num = int(input())
 testcase = [int(input()) for _ in range(testcase_num)]
 
-cache_zero = [1, 0]
-cache_one = [0, 1]
 
-
-def fib_func(num):
-    if len(cache_zero) > num:
-        return [cache_zero[num], cache_one[num]]
-    left = fib_func(num-1)
-    right = fib_func(num-2)
-    cache_zero.append(left[0] + right[0])
-    cache_one.append(left[1] + right[1])
-    return [cache_zero[num], cache_one[num]]
+def fibonacci(k):
+    if k >= len(cache_zero):
+        zero1, one1 = fibonacci(k-1)
+        zero2, one2 = fibonacci(k-2)
+        cache_zero.append(zero1 + zero2)
+        cache_one.append(one1 + one2)
+    return cache_zero[k], cache_one[k]
 
 
 for n in testcase:
-    result = fib_func(n)
-    print(result[0], result[1])
+    result_zero, result_one = fibonacci(n)
+    print(result_zero, result_one)
