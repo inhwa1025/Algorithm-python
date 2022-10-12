@@ -1,43 +1,46 @@
-# 양과 늑대
-from collections import deque
-
-
+# 양과 늑대, BFS, 백트래킹(중복 경로 체크 안함)
 def solution(info, edges):
     # graph[i] = [자식의 노드 번호 리스트]
-    graph = [deque() for _ in range(len(info))]
+    graph = [[] for _ in range(len(info))]
     for edge in edges:
         graph[edge[0]].append(edge[1])
     visited = [False for _ in range(len(info))]
+    global maxSheep
+    maxSheep = 1
 
-    print(graph)
+    # print(graph)
 
-    stack = [0]  # 시작점은 루트노드
-    result = 0  # 최대 양의 수
-    shp_wolf = [0, 0]  # [현재 양의 수, 늑대의 수]
-    while stack:
-        top = stack.pop()
-        if not visited[top]:
-            shp_wolf[info[top]] += 1
-            visited[top] = True
-        print("현재노드:", top, end=" ")
-        print(", result:", result, end=" ")
-        print(", 현재 양/늑대:", shp_wolf)
+    def dfs(sheep, wolf, cur, path):
+        global maxSheep
+        # 현재 노드가 양이면 sheep += 1, 늑대이면 wolf += 1
+        sheep += info[cur] ^ 1  # XOR 연산 사용 0^1=1
+        wolf += info[cur]
 
-        # 양이 늑대에게 잡아먹히는 순간 이전 노드로 돌아가기
-        if shp_wolf[0] <= shp_wolf[1]:
-            shp_wolf[info[top]] -= 1
-            continue
-        else:
-            result = max(result, shp_wolf[0])
+        # print("경로:", path)
+        # print("현재노드:", cur, ", maxSheep:", maxSheep, ", 현재 양/늑대:", sheep, ",", wolf)
 
-        # 더 이상 나아갈 노드가 없을 때
-        if not graph[top]:
-            if info[top]:  # 늑대일 때
-                shp_wolf[info[top]] -= 1
-            print("end")
-            continue
-        else:
-            stack.append(top)
-            stack.append(graph[top].popleft())
+        # 양이 늑대에게 잡아먹히는 경우 종료
+        if sheep <= wolf:
+            # print("end")
+            return 0
+
+        # 현재 양의 수와 최대값 비교
+        maxSheep = max(maxSheep, sheep)
+
+        # 가능한 모든 경우 탐색
+        for p in path:
+            for nxt in graph[p]:
+                if not visited[nxt]:
+                    path.append(nxt)
+                    visited[nxt] = True
+                    maxSheep = max(maxSheep, dfs(sheep, wolf, nxt, path))
+                    visited[nxt] = False
+                    path.pop()
+
+        return maxSheep
+
+    # 시작점은 루트노드
+    visited[0] = True
+    result = dfs(0, 0, 0, [0])
 
     return result
