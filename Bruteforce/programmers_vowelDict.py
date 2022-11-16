@@ -6,6 +6,7 @@
 from itertools import permutations
 
 
+# bruteforce
 def solution2(word):
     arr = ["A", "A", "A", "A", "A",
            "E", "E", "E", "E", "E",
@@ -23,7 +24,7 @@ def solution2(word):
     return every.index(word) + 1
 
 
-# 규칙 찾아서 푼 풀이 - 등비급수 사용
+# 수학적 규칙 찾아서 푼 풀이 - 등비급수 사용
 # (a-1) * ( pow(5,4) + (pow(5,4)-1)/(5-1) )
 # + (b-1) * ( pow(5,3) + (pow(5,3)-1)/(5-1) )
 # + (c-1) * ( pow(5,2) + (pow(5,2)-1)/(5-1) )
