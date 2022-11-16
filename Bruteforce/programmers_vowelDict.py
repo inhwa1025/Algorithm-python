@@ -6,8 +6,7 @@
 from itertools import permutations
 
 
-def solution(word):
-    # dic = {"A": 1, "E": 2, "I": 3, "O": 4, "U": 5}
+def solution2(word):
     arr = ["A", "A", "A", "A", "A",
            "E", "E", "E", "E", "E",
            "I", "I", "I", "I", "I",
@@ -22,3 +21,28 @@ def solution(word):
     # print(every)
 
     return every.index(word) + 1
+
+
+# 규칙 찾아서 푼 풀이 - 등비급수 사용
+# (a-1) * ( pow(5,4) + (pow(5,4)-1)/(5-1) )
+# + (b-1) * ( pow(5,3) + (pow(5,3)-1)/(5-1) )
+# + (c-1) * ( pow(5,2) + (pow(5,2)-1)/(5-1) )
+# + (d-1) * ( pow(5,1) + (pow(5,1)-1)/(5-1) )
+# + (e-1) * ( pow(5,0) + (pow(5,0)-1)/(5-1) )
+# + n
+def solution(word):
+    dic = {"A": 1, "E": 2, "I": 3, "O": 4, "U": 5}
+    n = len(word)
+    num_list = []
+    result = 0
+
+    for w in word:
+        num_list.append(dic[w])
+    # print(num_list)
+
+    for i in range(n):
+        result += (num_list[i] - 1) * (pow(5, 4 - i) + (pow(5, 4 - i) - 1) / 4)
+
+    result += n
+
+    return result
