@@ -8,6 +8,8 @@
 - [BOJ] 1038번 감소하는 수
 - [BOJ] 15661번 링크와 스타트
 - [BOJ] 14888번 연산자 끼워넣기
+- [Programmers] 소수 찾기
+- [Programmers] 모음사전 
 
 
 ## 2. Greedy & Sort
@@ -97,6 +99,8 @@
 
 - [BOJ] 1002번 터렛 
 - [BOJ] 1920번 수 찾기 
+- [Programmers] 카펫 
+- [Programmers] 프린터 
 
 
 # 코테 기출
