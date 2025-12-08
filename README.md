@@ -52,6 +52,8 @@
 ## 6. Dynamic Programming
 
 - [BOJ] 1003번 피보나치 함수
+- [BOJ] 2193번 이친수
+- [BOJ] 9252번 최장 공통 부분 수열 찾기
 - [BOJ] 11727번 2×n 타일링 2
 - [BOJ] 1965번 상자넣기
 - [BOJ] 11660번 구간 합 구하기 5 ❌
@@ -80,17 +82,34 @@
 - [Programmers] 타겟 넘버 
 - [BOJ] 9663번 N-Queen 
 - [BOJ] 1987번 알파벳 ❌
+- [BOJ] 11725번 트리의 부모 찾기
 - [BOJ] 13023번 ABCDE ❌
 
 
 ## 10. Dijkstra
 
+- [BOJ] 1753번 최단경로
 - [BOJ] 10282번 해킹
 - [BOJ] 18352번 특정 거리의 도시 찾기
 - [BOJ] 13424번 비밀 모임
 
 
-## 11. Segment Tree
+## 11. Bellman-Ford
+
+- [BOJ] 11657번 타임머신
+
+
+## 12. Floyd-Warshall
+
+- [BOJ] 11404번 플로이드
+
+
+## 13. MST
+
+- [BOJ] 1197번 최소 스패닝 트리
+
+
+## 15. Segment Tree
 
 - [BOJ] 2357번 최솟값과 최대값 ❌
 
@@ -101,6 +120,8 @@
 - [BOJ] 1920번 수 찾기 
 - [Programmers] 카펫 
 - [Programmers] 프린터 
+- [Codility] MaxCounters
+- [Codility] PassingCars
 
 
 # 코테 기출
